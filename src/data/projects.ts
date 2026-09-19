@@ -110,6 +110,39 @@ export const projects: Project[] = [
     downloadLabel: "Download PBIX",
     powerBiUrl: "",
   },
+  {
+    slug: "airline-network-planning-route-optimization",
+    title: "Airline Network Planning & Route Optimization Report",
+    category: "Power BI / Airline Network Analytics",
+    shortDescription:
+      "A network performance report for an airline route network, tracking revenue, profitability, load factor, and on-time performance by route.",
+    technologies: ["Power BI", "DAX", "Power Query", "Data Modelling"],
+    image: "/projects/airline-network-optimization-dashboard.png",
+    imageAlt:
+      "Network Performance Overview dashboard in Power BI showing total revenue, profit, load factor, on-time percentage, revenue trend, average delay by route, and route profitability",
+    overview:
+      "A network planning and route optimization report built to give a clear view of how an airline's route network is performing financially and operationally. It combines revenue and profit trends with load factor, on-time performance, and route-level profitability in a single interactive report.",
+    objective:
+      "To support network planning decisions by surfacing which routes are profitable, which are underperforming, and how delays and load factor are affecting overall network performance — filterable by month.",
+    features: [
+      "Total revenue, profit, load factor, and on-time percentage summary",
+      "Monthly total revenue trend",
+      "Average delay by route",
+      "Route performance ranked by profit",
+      "Interactive filtering by month",
+    ],
+    keyMetrics: [
+      "Total Revenue",
+      "Profit",
+      "Load Factor",
+      "On-Time %",
+      "Route Profitability",
+    ],
+    downloadUrl:
+      "/downloads/Airline-Network-Planning-Route-Optimization-Report.pbix",
+    downloadLabel: "Download PBIX",
+    powerBiUrl: "",
+  },
 ];
 
 /**
