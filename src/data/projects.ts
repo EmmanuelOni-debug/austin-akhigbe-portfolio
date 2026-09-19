@@ -139,7 +139,7 @@ export const projects: Project[] = [
       "Route Profitability",
     ],
     downloadUrl:
-      "/downloads/Airline_Network_Planning_&_Route_Optimization_Report.pbix",
+      "/downloads/Airline_Report.pbix",
     downloadLabel: "Download PBIX",
     powerBiUrl: "",
   },
