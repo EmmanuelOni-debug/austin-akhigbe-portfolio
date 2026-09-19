@@ -117,7 +117,7 @@ export const projects: Project[] = [
     shortDescription:
       "A network performance report for an airline route network, tracking revenue, profitability, load factor, and on-time performance by route.",
     technologies: ["Power BI", "DAX", "Power Query", "Data Modelling"],
-    image: "/projects/airline-network-optimization-dashboard.png",
+    image: "/projects/Airline_Report.png",
     imageAlt:
       "Network Performance Overview dashboard in Power BI showing total revenue, profit, load factor, on-time percentage, revenue trend, average delay by route, and route profitability",
     overview:
