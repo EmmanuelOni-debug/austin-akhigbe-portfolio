@@ -72,10 +72,12 @@ export default function Hero() {
 
         <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
           <a
-            href="#projects"
-            className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5"
-          >
-            View Projects
+            
+  href="#interactive-dashboards"
+  className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5"
+>
+  View Dashboards
+            
             <ArrowUpRight
               size={16}
               className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
