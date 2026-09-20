@@ -49,7 +49,8 @@ export default function PowerBIEmbed({
               View Fullscreen
             </button>
             
-              href={dashboard.embedUrl}
+              <a
+                href={dashboard.embedUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-2.5 text-sm font-medium transition-transform hover:-translate-y-0.5"
