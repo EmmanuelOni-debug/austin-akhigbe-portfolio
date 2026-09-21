@@ -21,6 +21,7 @@ function LogoChip({ item }: { item: (typeof experienceData)[number] }) {
         alt={`${item.company} logo`}
         width={120}
         height={40}
+        loading="eager"
         className={`h-6 w-auto object-contain transition-all duration-300 ${
           item.logoOnDark
             ? "opacity-70 group-hover:opacity-100"

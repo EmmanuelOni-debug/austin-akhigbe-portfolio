@@ -154,4 +154,19 @@ export const experienceData: ExperienceItem[] = [
       { title: "Reporting automation", text: "Automated workflows to cut manual compilation time and speed up decision cycles." },
     ],
   },
+  {
+    company: "InsightSoftware",
+    industry: "Technology",
+    logo: "/logos/insightsoftware.png",
+    summary:
+      "Delivered automated Power BI and Salesforce reporting for a rapidly scaling global sales organisation, and led data migration and governance work through a major post-acquisition transformation.",
+    tags: ["Power BI", "Salesforce", "Excel"],
+    achievements: [
+      { title: "Enterprise sales intelligence", text: "Automated Power BI and Salesforce reporting gave real-time visibility of bookings, pipeline health, and executive KPIs." },
+      { title: "Post-acquisition data migration", text: "Led enterprise data migration and integration work, aligning Salesforce structures and reporting logic to a newly merged business." },
+      { title: "Data quality & governance", text: "Reconciled Salesforce records and resolved data issues, working with SFDC admins to keep reporting and workflows aligned to evolving sales processes." },
+      { title: "Multi-audience dashboards", text: "Built and maintained dashboards for VPs, Marketing, BDRs, and Sales Reps, surfacing pipeline risk, conversion trends, and revenue opportunities." },
+      { title: "Training & BI enablement", text: "Delivered executive training on Salesforce reporting and self-service BI, mentoring analysts to build lasting capability." },
+    ],
+  },
 ];
