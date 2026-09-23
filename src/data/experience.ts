@@ -12,9 +12,11 @@
  * industry: powers the filter pills. Reuse an existing value or add a new
  * one — new values automatically get their own pill.
  *
- * featured: true  -> shown as the larger "hero" card in the grid
- * logo / logoOnDark: as before — logo file path, and whether it already
- * has a dark background baked in.
+ * logo / logoOnDark: logo file path, and whether it already has a dark
+ * background baked in.
+ *
+ * The grid shows 3 columns x 3 rows on desktop — keep this list at 9
+ * companies for a clean 3x3. Adding a 10th will just wrap onto a new row.
  * ============================================================================
  */
 
@@ -28,7 +30,6 @@ export type ExperienceItem = {
   summary: string;
   tags: string[];
   achievements: Achievement[];
-  featured?: boolean;
 };
 
 export const experienceData: ExperienceItem[] = [
@@ -37,7 +38,7 @@ export const experienceData: ExperienceItem[] = [
     industry: "Public Sector",
     logo: "/logos/cps.png",
     summary:
-      "Delivered enterprise-grade Power BI reporting for senior leaders across national public-sector operations, including a national inspection framework spanning 200+ CPS and HMCTS locations — cutting manual reporting effort by over 60%.",
+      "Delivered enterprise-grade Power BI reporting for senior leaders across national public-sector operations, including a national inspection framework spanning 200+ CPS and HMCTS locations that cut manual reporting effort by over 60%.",
     tags: ["Power BI", "DAX", "SharePoint"],
     achievements: [
       { title: "Enterprise BI delivery", text: "Automated Power BI data models replaced manual reporting, cutting effort by over 60% and improving data accuracy." },
@@ -46,14 +47,13 @@ export const experienceData: ExperienceItem[] = [
       { title: "Advanced data modelling", text: "Built governed, multi-source data models with automated DAX, Power Query, and QA validation." },
       { title: "Stakeholder engagement", text: "Delivered executive reporting packs and worked directly with regional leaders and governance teams." },
     ],
-    featured: true,
   },
   {
     company: "National Grid",
     industry: "Energy & Utilities",
     logo: "/logos/national-grid.png",
     summary:
-      "Led a centralised reporting ecosystem across procurement, contracts, logistics, and material allocation for a multi-project infrastructure portfolio — giving leaders end-to-end visibility of demand, supplier performance, and delivery risk.",
+      "Led a centralised reporting ecosystem across procurement, contracts, logistics, and material allocation for a multi-project infrastructure portfolio, giving leaders end-to-end visibility of demand, supplier performance, and delivery risk.",
     tags: ["Power BI", "SQL", "Power Query"],
     achievements: [
       { title: "Centralised data architecture", text: "Built scalable Power BI and SQL data models spanning procurement, contracts, logistics, and allocation." },
@@ -69,7 +69,7 @@ export const experienceData: ExperienceItem[] = [
     logo: "/logos/nuclear-waste-services.png",
     logoOnDark: true,
     summary:
-      "Built automated procurement and commercial BI environments integrating Azure SQL, SharePoint, Atamis, and Microsoft Fabric — giving commercial directors real-time visibility across multi-million-pound contract portfolios in a highly regulated nuclear environment.",
+      "Built automated procurement and commercial BI environments integrating Azure SQL, SharePoint, Atamis, and Microsoft Fabric, giving commercial directors real-time visibility across multi-million-pound contract portfolios in a highly regulated nuclear environment.",
     tags: ["Power BI", "Microsoft Fabric", "Azure SQL"],
     achievements: [
       { title: "Procurement & commercial BI", text: "Automated reporting across Azure SQL, SharePoint, Atamis, and Microsoft Fabric for real-time procurement intelligence." },
@@ -129,7 +129,7 @@ export const experienceData: ExperienceItem[] = [
     industry: "Public Sector",
     logo: "/logos/wmfs.png",
     summary:
-      "Engineered a unified Power BI reporting ecosystem across Azure SQL, PostgreSQL, SQL Server, and Dynamics 365 — delivering real-time emergency response dashboards and training programmes that built lasting BI capability.",
+      "Engineered a unified Power BI reporting ecosystem across Azure SQL, PostgreSQL, SQL Server, and Dynamics 365, delivering real-time emergency response dashboards and training programmes that built lasting BI capability.",
     tags: ["Power BI", "Dynamics 365", "DAX"],
     achievements: [
       { title: "Multi-system data integration", text: "Unified Azure SQL, PostgreSQL, SQL Server, Dynamics 365, and API data into one governed ecosystem." },

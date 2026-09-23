@@ -16,11 +16,14 @@ export const siteConfig = {
   /** The name shown in the navigation bar, hero section, and footer. */
   name: "Austin Akhigbe",
 
+  /** Professional qualifications shown next to the name (smaller, suffix-style). */
+  qualifications: "BSc, MBA",
+
   /** The job title shown under the name. */
-  title: "Power BI Developer",
+  title: "BI Consultant",
 
   /** Short version of the title, used in the browser tab and search results. */
-  tagline: "Austin Akhigbe — Power BI Developer",
+  tagline: "Austin Akhigbe, BI Consultant",
 
   /**
    * The sentence shown under the big heading on the homepage.
@@ -28,21 +31,21 @@ export const siteConfig = {
    * or results unless you can back them up.
    */
   heroDescription:
-    "Building clear, interactive Power BI dashboards that turn raw data into decisions — from data modelling and DAX to reporting people actually use.",
+    "Turning complex data into clear business insight by building dashboards, automating processes, and integrating modern BI and CRM platforms.",
 
   /**
    * The longer paragraph(s) in the "About" section.
    * Each item in this array becomes its own paragraph.
    */
   aboutParagraphs: [
-    "Austin works on the full lifecycle of a Power BI report — connecting to source data, shaping and cleaning it in Power Query, building a data model that holds up, writing DAX that answers the actual business question, and designing dashboards that are easy to read at a glance.",
-    "The focus is on business intelligence work that supports real decisions: sales performance, operational monitoring, and reporting that replaces manual spreadsheets with something interactive and reliable.",
-    "Every project starts with the same question — what does the person looking at this dashboard need to know, and how quickly can they find it?",
+    "Austin works on the full lifecycle of a Power BI report: connecting to source data, shaping and cleaning it in Power Query, building a data model that holds up, writing DAX that answers the actual business question, and designing dashboards that are easy to read at a glance.",
+    "The focus is on business intelligence work that supports real decisions and automates the reporting that used to be manual: operational monitoring, process automation, and reporting that replaces spreadsheets with something interactive and reliable.",
+    "Every project starts with the same question: what does the person looking at this dashboard need to know, and how quickly can they find it?",
   ],
 
   /** Meta description used for SEO (shows up in Google search results). */
   metaDescription:
-    "Portfolio of Austin Akhigbe, a Power BI Developer specialising in dashboard development, data modelling, DAX, and business intelligence reporting.",
+    "Portfolio of Austin Akhigbe, a BI Consultant specialising in dashboard development, automation, data modelling, and CRM/platform integration.",
 
   /**
    * The full web address of the site once it's live.
@@ -58,16 +61,6 @@ export const siteConfig = {
     { label: "Projects", href: "/#interactive-dashboards" },
     { label: "Experience", href: "/#experience" },
     { label: "Contact", href: "/#contact" },
-  ],
-
-  /** Terminal-style easter egg content (small detail, not a real terminal). */
-  terminalLines: [
-    "> whoami",
-    "Austin Akhigbe — Power BI Developer",
-    "> focus",
-    "Dashboards, data modelling, DAX",
-    "> mission",
-    "Turning data into usable insight",
   ],
 };
 

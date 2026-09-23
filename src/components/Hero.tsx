@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
-import Terminal from "./Terminal";
 
 const container = {
   hidden: {},
@@ -58,9 +57,14 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="text-[15vw] leading-[0.92] md:text-[7.5rem] lg:text-[8.5rem] font-medium tracking-tighter text-balance"
+          className="flex flex-wrap items-baseline gap-x-3 leading-[0.92] font-medium tracking-tighter text-balance"
         >
-          {siteConfig.name}
+          <span className="text-[7.5vw] md:text-[3.75rem] lg:text-[4.25rem]">
+            {siteConfig.name}
+          </span>
+          <span className="text-[3vw] md:text-xl lg:text-2xl font-normal tracking-normal text-muted-foreground">
+            {siteConfig.qualifications}
+          </span>
         </motion.h1>
 
         <motion.p
@@ -72,12 +76,10 @@ export default function Hero() {
 
         <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
           <a
-            
-  href="#interactive-dashboards"
-  className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5"
->
-  View Dashboards
-            
+            href="#interactive-dashboards"
+            className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium transition-transform hover:-translate-y-0.5"
+          >
+            View Dashboards
             <ArrowUpRight
               size={16}
               className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -89,10 +91,6 @@ export default function Hero() {
           >
             Get in Touch
           </a>
-        </motion.div>
-
-        <motion.div variants={item} className="mt-16 max-w-md">
-          <Terminal />
         </motion.div>
       </motion.div>
 

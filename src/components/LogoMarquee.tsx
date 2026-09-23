@@ -10,7 +10,7 @@ import { experienceData } from "@/data/experience";
 function LogoChip({ item }: { item: (typeof experienceData)[number] }) {
   return (
     <div
-      className={`group flex h-16 w-[168px] shrink-0 items-center justify-center rounded-xl border transition-colors ${
+      className={`flex h-20 w-[200px] shrink-0 items-center justify-center rounded-xl border transition-transform duration-300 hover:scale-[1.03] ${
         item.logoOnDark
           ? "border-border bg-background-elevated"
           : "border-transparent bg-foreground"
@@ -19,14 +19,10 @@ function LogoChip({ item }: { item: (typeof experienceData)[number] }) {
       <Image
         src={item.logo}
         alt={`${item.company} logo`}
-        width={120}
-        height={40}
+        width={140}
+        height={48}
         loading="eager"
-        className={`h-6 w-auto object-contain transition-all duration-300 ${
-          item.logoOnDark
-            ? "opacity-70 group-hover:opacity-100"
-            : "grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
-        }`}
+        className="h-9 w-auto max-w-[85%] object-contain"
       />
     </div>
   );

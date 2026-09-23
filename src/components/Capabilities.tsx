@@ -12,7 +12,7 @@ export default function Capabilities() {
           description="A focused toolkit for turning raw data into reporting people can act on."
         />
 
-        <div className="mt-16 grid md:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden border border-border">
           {capabilitiesData.map((group, i) => (
             <Reveal
               key={group.category}

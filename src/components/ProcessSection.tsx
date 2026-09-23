@@ -9,7 +9,7 @@ export default function ProcessSection() {
         <SectionHeading
           eyebrow="Process"
           title="A consistent approach to BI work."
-          description="A general methodology — the shape most reporting projects follow, from question to finished dashboard."
+          description="A general methodology: the shape most reporting projects follow, from question to finished dashboard."
         />
 
         <div className="mt-16 divide-y divide-border border-t border-b border-border">

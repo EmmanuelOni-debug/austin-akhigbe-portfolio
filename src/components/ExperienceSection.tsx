@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
@@ -26,15 +26,12 @@ function ExperienceCard({
   onToggle: () => void;
 }) {
   return (
-    <Reveal
-      delay={Math.min(index, 5) * 0.06}
-      className={item.featured ? "md:col-span-2" : ""}
-    >
+    <Reveal delay={Math.min(index, 8) * 0.05}>
       <motion.div
         layout
         whileHover={{ y: -4 }}
         transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-        className="group relative flex h-full flex-col rounded-2xl border border-border bg-background-elevated p-6 md:p-7 overflow-hidden"
+        className="group relative flex h-full flex-col rounded-2xl border border-border bg-background-elevated p-5 md:p-6 overflow-hidden"
       >
         <div
           aria-hidden="true"
@@ -45,36 +42,28 @@ function ExperienceCard({
           }}
         />
 
-        <div className="relative flex items-start justify-between gap-4">
+        <div className="relative flex items-start justify-between gap-3">
           <div>
-            <h3
-              className={`font-medium tracking-tight ${
-                item.featured ? "text-xl md:text-2xl" : "text-lg"
-              }`}
-            >
+            <h3 className="text-base md:text-lg font-medium tracking-tight leading-snug">
               {item.company}
             </h3>
-            <p className="mt-2 font-mono text-[10.5px] tracking-[0.12em] text-accent uppercase">
+            <p className="mt-1.5 font-mono text-[10px] tracking-[0.12em] text-accent uppercase">
               {item.industry}
             </p>
           </div>
-          <div className="flex h-9 w-16 shrink-0 items-center justify-center rounded-lg bg-foreground/95 px-2">
+          <div className="flex h-8 w-14 shrink-0 items-center justify-center rounded-lg bg-foreground/95 px-2">
             <Image
               src={item.logo}
               alt=""
               aria-hidden="true"
               width={80}
               height={28}
-              className="h-4 w-auto object-contain"
+              className="h-3.5 w-auto object-contain"
             />
           </div>
         </div>
 
-        <p
-          className={`relative mt-4 text-muted-foreground ${
-            item.featured ? "text-sm md:text-[15px] max-w-lg" : "text-[13.5px]"
-          } leading-relaxed`}
-        >
+        <p className="relative mt-3 text-[13px] text-muted-foreground leading-relaxed">
           {item.summary}
         </p>
 
@@ -158,7 +147,7 @@ export default function ExperienceSection() {
         <SectionHeading
           eyebrow="Experience"
           title="A track record across critical UK infrastructure."
-          description="Selected consulting engagements spanning public sector, energy, and technology organisations — delivered as Power BI, data modelling, and reporting work."
+          description="Selected consulting engagements spanning public sector, energy, and technology organisations, delivered as Power BI, data modelling, and reporting work."
         />
 
         <Reveal delay={0.1} className="mt-10 flex flex-wrap gap-2">
@@ -215,9 +204,6 @@ export default function ExperienceSection() {
               Worked with
             </span>
             <span className="h-px flex-1 bg-border" />
-            <span className="hidden md:inline-flex items-center gap-1 font-mono text-[10px] text-muted-foreground">
-              Hover to pause <ArrowUpRight size={11} className="rotate-45" />
-            </span>
           </div>
           <LogoMarquee />
         </Reveal>

@@ -26,14 +26,14 @@ export const interactiveDashboards: InteractiveDashboard[] = [
   {
     title: "Merchandise Sales Dashboard",
     description:
-      "A live, filterable view of merchandise sales performance — explore it directly in the browser.",
+      "A live, filterable view of merchandise sales performance. Explore it directly in the browser.",
     embedUrl:
       "https://app.powerbi.com/view?r=eyJrIjoiMzRiZTcwNDYtZGJkMS00MTc2LWI0OGYtMzdmMzhlM2RkYWNiIiwidCI6ImI4YTczMWUzLTE2NjAtNDNiZS1hNzY3LTdiNGQ5NzBhODM0MCJ9",
   },
   {
     title: "Email Campaign Dashboard",
     description:
-      "A live, filterable view of email campaign performance — explore it directly in the browser.",
+      "A live, filterable view of email campaign performance. Explore it directly in the browser.",
     embedUrl:
       "https://app.powerbi.com/view?r=eyJrIjoiNGVlYjUzNGUtOGQyYS00NGFhLWExOGItMjU3NGExNDkyZDUwIiwidCI6ImI4YTczMWUzLTE2NjAtNDNiZS1hNzY3LTdiNGQ5NzBhODM0MCJ9",
   },
