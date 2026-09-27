@@ -32,22 +32,22 @@ export const capabilitiesData: SkillGroup[] = [
     items: [
       "Data Modelling",
       "Data Transformation",
-      "Data Cleaning",
+      "Data Integration",
+      "Data Governance",
       "Data Analysis",
     ],
   },
   {
     category: "Microsoft / BI",
-    items: ["DAX", "Power Query", "Excel", "SQL", "Microsoft SQL Server"],
+    items: ["DAX", "Power Query", "Advanced Excel", "SQL", "Microsoft SQL Server"],
   },
   {
     category: "CRM",
     items: [
-      "CRM",
       "Salesforce",
       "Atamis",
       "MS Dynamics 365",
-      "SalesLoft",
+      "SAP CX",
       "Sugar CRM",
     ],
   },

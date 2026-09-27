@@ -65,7 +65,7 @@ export const experienceData: ExperienceItem[] = [
   },
   {
     company: "Nuclear Waste Services",
-    industry: "Energy & Utilities",
+    industry: "Public Sector",
     logo: "/logos/nuclear-waste-services.png",
     logoOnDark: true,
     summary:
