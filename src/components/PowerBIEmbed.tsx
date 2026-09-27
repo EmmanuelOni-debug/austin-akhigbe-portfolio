@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { ArrowUpRight, Maximize } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight, ChevronDown, Maximize } from "lucide-react";
 import type { InteractiveDashboard } from "@/data/embeds";
 import Reveal from "./Reveal";
 
@@ -14,6 +15,7 @@ export default function PowerBIEmbed({
 }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
+  const [showAnalysis, setShowAnalysis] = useState(false);
 
   const goFullscreen = () => {
     const el = wrapperRef.current;
@@ -48,9 +50,8 @@ export default function PowerBIEmbed({
               <Maximize size={15} />
               View Fullscreen
             </button>
-            
-              <a
-                href={dashboard.embedUrl}
+            <a
+              href={dashboard.embedUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-2.5 text-sm font-medium transition-transform hover:-translate-y-0.5"
@@ -62,6 +63,76 @@ export default function PowerBIEmbed({
               />
             </a>
           </div>
+        </div>
+
+        <div className="border-b border-border px-6 py-4 md:px-8">
+          <button
+            type="button"
+            onClick={() => setShowAnalysis((v) => !v)}
+            aria-expanded={showAnalysis}
+            className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide text-accent hover:opacity-80 transition-opacity"
+          >
+            {showAnalysis ? "Hide Analysis" : "View Analysis"}
+            <ChevronDown
+              size={13}
+              className={`transition-transform duration-300 ${showAnalysis ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          <AnimatePresence initial={false}>
+            {showAnalysis && (
+              <motion.div
+                key="analysis"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                className="overflow-hidden"
+              >
+                <div className="mt-4 max-w-2xl space-y-5">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {dashboard.analysis.overview}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {dashboard.analysis.objective}
+                  </p>
+
+                  <div>
+                    <p className="font-mono text-[10px] tracking-[0.15em] text-foreground uppercase">
+                      What you can explore
+                    </p>
+                    <ul className="mt-3 space-y-2">
+                      {dashboard.analysis.features.map((feature) => (
+                        <li key={feature} className="flex gap-2.5 text-[13px] text-muted-foreground leading-relaxed">
+                          <span
+                            aria-hidden="true"
+                            className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent"
+                          />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="font-mono text-[10px] tracking-[0.15em] text-foreground uppercase">
+                      Key metrics
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {dashboard.analysis.keyMetrics.map((metric) => (
+                        <span
+                          key={metric}
+                          className="font-mono text-[10px] tracking-wide text-muted-foreground border border-border rounded-md px-2 py-1"
+                        >
+                          {metric}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         <div

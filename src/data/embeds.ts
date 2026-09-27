@@ -16,9 +16,25 @@
  * ============================================================================
  */
 
+/**
+ * "analysis": the content shown behind the "View Analysis" dropdown under
+ * each embed — a fuller breakdown of what the report does, in the same
+ * style as the write-ups used for the downloadable PBIX projects. Written
+ * at a "what this report is built to do" level (overview, what it lets a
+ * viewer explore, the metrics it's built around) rather than quoting exact
+ * figures from inside the live report, since those aren't visible here.
+ */
+export type DashboardAnalysis = {
+  overview: string;
+  objective: string;
+  features: string[];
+  keyMetrics: string[];
+};
+
 export type InteractiveDashboard = {
   title: string;
   description: string;
+  analysis: DashboardAnalysis;
   embedUrl: string;
 };
 
@@ -27,6 +43,27 @@ export const interactiveDashboards: InteractiveDashboard[] = [
     title: "Merchandise Sales Dashboard",
     description:
       "A live, filterable view of merchandise sales performance. Explore it directly in the browser.",
+    analysis: {
+      overview:
+        "A merchandise sales performance report built to give a clear, filterable view of how products are selling across categories, regions, and time. It brings headline sales figures together with product-level and regional breakdowns into a single interactive report.",
+      objective:
+        "To replace static sales reporting with one interactive view that lets a viewer filter by date, product, and region, and immediately see which lines and periods are performing well and which need attention.",
+      features: [
+        "Total sales revenue and units sold summary",
+        "Sales trend over time by period",
+        "Performance broken down by product and category",
+        "Performance broken down by region or store",
+        "Top and bottom-performing products",
+        "Interactive filtering by date range, product, and region",
+      ],
+      keyMetrics: [
+        "Total Sales",
+        "Units Sold",
+        "Average Order Value",
+        "Sales by Category",
+        "Sales by Region",
+      ],
+    },
     embedUrl:
       "https://app.powerbi.com/view?r=eyJrIjoiMzRiZTcwNDYtZGJkMS00MTc2LWI0OGYtMzdmMzhlM2RkYWNiIiwidCI6ImI4YTczMWUzLTE2NjAtNDNiZS1hNzY3LTdiNGQ5NzBhODM0MCJ9",
   },
@@ -34,6 +71,26 @@ export const interactiveDashboards: InteractiveDashboard[] = [
     title: "Email Campaign Dashboard",
     description:
       "A live, filterable view of email campaign performance. Explore it directly in the browser.",
+    analysis: {
+      overview:
+        "An email marketing performance report built to give a clear view of how campaigns are landing with an audience. It brings delivery, open, and click metrics together with campaign-by-campaign comparisons into a single interactive report.",
+      objective:
+        "To support marketing decisions by surfacing which campaigns are performing well and which are underperforming, filterable by campaign and date range so a team can act on what's working.",
+      features: [
+        "Delivery rate, open rate, and click-through rate summary",
+        "Engagement trend over time across sends",
+        "Campaign-by-campaign performance comparison",
+        "Audience or segment-level breakdown",
+        "Interactive filtering by campaign and date range",
+      ],
+      keyMetrics: [
+        "Open Rate",
+        "Click-Through Rate",
+        "Delivery Rate",
+        "Emails Sent",
+        "Campaign Performance",
+      ],
+    },
     embedUrl:
       "https://app.powerbi.com/view?r=eyJrIjoiNGVlYjUzNGUtOGQyYS00NGFhLWExOGItMjU3NGExNDkyZDUwIiwidCI6ImI4YTczMWUzLTE2NjAtNDNiZS1hNzY3LTdiNGQ5NzBhODM0MCJ9",
   },
