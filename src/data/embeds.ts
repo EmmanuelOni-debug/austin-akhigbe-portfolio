@@ -94,4 +94,36 @@ export const interactiveDashboards: InteractiveDashboard[] = [
     embedUrl:
       "https://app.powerbi.com/view?r=eyJrIjoiNGVlYjUzNGUtOGQyYS00NGFhLWExOGItMjU3NGExNDkyZDUwIiwidCI6ImI4YTczMWUzLTE2NjAtNDNiZS1hNzY3LTdiNGQ5NzBhODM0MCJ9",
   },
+  {
+    title: "UK Sales and Margin Dashboard",
+    description:
+      "A live, multi-page finance report on sales, margin, budget and forecast. Illustrative data, explore it directly in the browser.",
+    analysis: {
+      overview:
+        "A multi-page finance report for a UK seed business, covering sales, margin, budget, forecast and customers from July 2020 to September 2026. It lets a finance team see sales and margin performance against plan in one place, and answers five questions: where are we against budget and last year, what drove the difference, which products and customers make the money, where do we sell and deliver, and what does the rest of the year look like.",
+      objective:
+        "To replace scattered finance spreadsheets with one governed model that explains the story behind the numbers. Every page ends with an insight box that turns the charts into plain-English takeaways, so a reader gets the answer without having to interpret the visuals.",
+      features: [
+        "Executive Overview: net sales, variance to budget and last year, gross margin and rolling 12 months, with a monthly view against budget and prior year",
+        "Budget vs Actual: income statement and variances by business area, product range and month",
+        "Price, Volume and Mix: splits each sales variance into price, tonnes sold and product shift",
+        "Products and Margin: shows where profit comes from across product ranges",
+        "Customers and Channels: top customers and channel economics",
+        "Geography and Delivery: map view with freight and lead times",
+        "Forecast and Seasonality: outlook, forecast accuracy and the seasonal sales pattern",
+        "Filters for fiscal year, fiscal month, business area and channel, plus a Data Dictionary page defining every measure",
+      ],
+      keyMetrics: [
+        "Net Sales",
+        "Net Sales vs Budget %",
+        "Gross Margin %",
+        "Sales vs Last Year",
+        "Rolling 12 Months",
+        "Price, Volume, Mix",
+        "Forecast Accuracy",
+      ],
+    },
+    embedUrl:
+      "https://app.powerbi.com/view?r=eyJrIjoiZTg0OTc0MWUtOTNmNC00YjY0LWI4YjQtODUyNTcwMDU2Njg2IiwidCI6ImZhYzY2NGRkLWEzNWItNDMyNy04YjFiLTQ2MzIzMmY1MjBkMiJ9",
+  },
 ];
