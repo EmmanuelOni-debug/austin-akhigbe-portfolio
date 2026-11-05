@@ -124,6 +124,6 @@ export const interactiveDashboards: InteractiveDashboard[] = [
       ],
     },
     embedUrl:
-      "https://app.powerbi.com/view?r=eyJrIjoiZTg0OTc0MWUtOTNmNC00YjY0LWI4YjQtODUyNTcwMDU2Njg2IiwidCI6ImZhYzY2NGRkLWEzNWItNDMyNy04YjFiLTQ2MzIzMmY1MjBkMiJ9",
+      "https://app.powerbi.com/view?r=eyJrIjoiZTg0OTc0MWUtOTNmNC00YjY0LWI4YjQtODUyNTcwMDU2Njg2IiwidCI6ImZhYzY2NGRkLWEzNWItNDMyNy04YjFiLTQ2MzIzMmY1MjBkMiJ9&pageName=f13e3e751b45003e3683",
   },
 ];
